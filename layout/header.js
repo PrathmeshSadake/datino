@@ -3,19 +3,19 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const { categories } = useSelector((state) => state.categories);
-  console.log(categories);
+  // console.log(categories);
 
   return (
-    <header class="flex flex-none items-center bg-white py-10">
-      <div class="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 container xl:max-w-7xl mx-auto px-4 lg:px-8">
+    <header className="flex flex-none items-center bg-white py-10">
+      <div className="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 container xl:max-w-7xl mx-auto px-4 lg:px-8">
         <Link href="/">
-          <a class="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-600 hover:text-green-400">
+          <a className="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-green-600 hover:text-green-400">
             <svg
               stroke="currentColor"
               fill="none"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              class="opacity-75 hi-outline hi-cube-transparent inline-block w-6 h-6"
+              className="opacity-75 hi-outline hi-cube-transparent inline-block w-6 h-6"
             >
               <path
                 stroke-linecap="round"
@@ -28,32 +28,32 @@ const Header = () => {
           </a>
         </Link>
 
-        <div class="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col text-center md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0 md:space-x-10">
           <nav>
             {categories.map((category) => (
               <Link key={category.id} href={`/${category.name}`}>
                 <a
                   style={{ margin: "0 10px" }}
-                  class="font-semibold text-gray-900 hover:text-gray-500"
+                  className="font-semibold text-gray-900 hover:text-gray-500"
                 >
                   {category.name}
                 </a>
               </Link>
             ))}
             <Link href="/contact">
-              <a class="font-semibold text-gray-900 hover:text-gray-500">
+              <a className="font-semibold text-gray-900 hover:text-gray-500">
                 <span>Contact</span>
               </a>
             </Link>
           </nav>
-          <div class="flex items-center justify-center space-x-2">
-            <a class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
+          <div className="flex items-center justify-center space-x-2">
+            <a className="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-3 py-2 leading-6 rounded border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white active:shadow-none">
               <span>Sign In</span>
               <svg
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
-                class="opacity-50 hi-solid hi-arrow-right inline-block w-5 h-5"
+                className="opacity-50 hi-solid hi-arrow-right inline-block w-5 h-5"
               >
                 <path
                   fill-rule="evenodd"

@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import "../styles/globals.css";
 import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 import { getAllCategories } from "../redux/actions/categoriesAction";
@@ -16,7 +17,6 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <Layout>
-      .
       <Component {...pageProps} />
     </Layout>
   );
